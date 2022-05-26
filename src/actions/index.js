@@ -20,6 +20,12 @@ export const fetchUser = (userId) => async (dispatch) => {
 
 export const fetchComments = (postId) => async (dispatch) => {
     dispatch({ type: "LOADING" });
-    const response = await jsonPlaceholder.get(`/users?id=${postId}`);
+    const response = await jsonPlaceholder.get(`/comments?postId=${postId}`);
     dispatch({ type: "FETCH_COMMENTS", payload: response.data });
+};
+
+export const fetchPost = (postId) => async (dispatch) => {
+    dispatch({ type: "LOADING" });
+    const response = await jsonPlaceholder.get(`/posts?id=${postId}`);
+    dispatch({ type: "FETCH_POST", payload: response.data });
 };

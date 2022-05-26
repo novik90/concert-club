@@ -20,10 +20,12 @@ const App = () => {
                         <nav className="nav">
                             <ul className="nav__list">
                                 <li className="nav__item">
-                                    <Link
-                                        className="nav__link"
-                                        to="/"
-                                    >
+                                    <Link className="nav__link" to="/">
+                                        Версия для слабовидящих
+                                    </Link>
+                                </li>
+                                <li className="nav__item">
+                                    <Link className="nav__link" to="/">
                                         Мой профиль
                                     </Link>
                                 </li>
@@ -34,7 +36,10 @@ const App = () => {
                 <Routes>
                     <Route path="/" element={<UserList />} />
                     <Route path="/user/:id" element={<User />} />
-                    <Route path="/post-comments/:id" element={<PostComments />} />
+                    <Route
+                        path="/post-comments/:id"
+                        element={<PostComments />}
+                    />
                 </Routes>
             </BrowserRouter>
         </div>

@@ -73,7 +73,12 @@ ul {
     padding: 0;
 }
 
+.nav__item {
+    margin-left: 12px;
+}
+
 .nav__link {
+    text-align: center;
     justify-self: center;
     display: block;
     padding: 12px 40px;
