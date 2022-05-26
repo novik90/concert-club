@@ -1,9 +1,85 @@
+:root {
+    --border: 1px solid red;
+    --black: #101010;
+    --white: #ffffff;
+}
+
 body {
     font-family: "Alegreya Sans SC", sans-serif;
     font-size: 12px;
+    margin: 0;
+    padding: 0;
 }
 
-h2 {
-    font-size: 35px;
-    font-weight: 500;
+p {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.container {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        width: 680px;
+    }
+}
+
+.header {
+    margin: 0;
+    padding: 0;
+    background-color: var(--black);
+}
+
+.header__content {
+    display: flex;
+    height: 70px;
+    margin-bottom: 35px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    flex-grow: 1;
+}
+
+.logo__text {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 28px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__link {
+    justify-self: center;
+    display: block;
+    padding: 12px 40px;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--black);
+    background-color: var(--white);
+    text-decoration: none;
 }

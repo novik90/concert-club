@@ -1,12 +1,12 @@
-const userPostsReducer = (state = [], action) => {
+const commentsReducer = (state = [], action) => {
     switch (action.type) {
         case "LOADING":
             return false;
-        case "FETCH_USER_POSTS":
+        case "FETCH_USER":
             return action.payload;
         default:
             return state;
     }
 };
 
-export default userPostsReducer;
+export default commentsReducer;

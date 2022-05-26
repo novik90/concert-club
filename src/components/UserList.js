@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import { fetchUsers } from "../actions/index";
 
 import "./UserList.css";
@@ -17,20 +18,20 @@ class UserList extends Component {
     renderList() {
         return this.props.users.map((user) => {
             return (
-                <li key={user.id}>
-                    <div>
-                        <h2>{this.splitName(user.name)}</h2>
+                <li className="user" key={user.id}>
+                    <div className="user__fullname">
+                        <Link to={`/user/${user.id}`}>
+                            <h3>{this.splitName(user.name)}</h3>
+                        </Link>
                     </div>
-                    <div>
-                        <div>
-                            <p>{user.address.city}</p>
-                        </div>
-                        <div>
-                            <p>{user.email}</p>
-                        </div>
-                        <div>
-                            <p>{user.phone}</p>
-                        </div>
+                    <div className="user__address">
+                        <p>{user.address.city}</p>
+                    </div>
+                    <div className="user__email">
+                        <p>{user.email}</p>
+                    </div>
+                    <div className="user__phone">
+                        <p>{user.phone}</p>
                     </div>
                 </li>
             );
@@ -38,7 +39,12 @@ class UserList extends Component {
     }
 
     render() {
-        return <ul>{this.renderList()}</ul>;
+        return (
+            <div className="container">
+                <h1>Users</h1>
+                <ul>{this.renderList()}</ul>
+            </div>
+        );
     }
 }
 
