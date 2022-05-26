@@ -5,7 +5,7 @@ const postReducer = (state = "", action) => {
         case "FETCH_POST":
             return action.payload[0];
         default:
-            return false;
+            return state;
     }
 };
 
