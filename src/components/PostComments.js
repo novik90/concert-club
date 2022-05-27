@@ -1,13 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchComments, fetchPost } from "../actions";
+import SendComment from "./SendComment";
 
 const PostComments = () => {
     const params = useParams();
     const post = useSelector((state) => state.post);
     const comments = useSelector((state) => state.comments);
     const dispatch = useDispatch();
+    const [showForm, setShowForm] = useState(false);
 
     useEffect(() => {
         dispatch(fetchComments(params.id));
@@ -23,6 +25,10 @@ const PostComments = () => {
                 <p>{post.body}</p>
             </div>
         );
+    };
+
+    const onShowForm = () => {
+        setShowForm((state) => !state);
     };
 
     const renderComments = () => {
@@ -51,6 +57,11 @@ const PostComments = () => {
             <div>{renderPost()}</div>
             <h2>COMMENTS</h2>
             <div>{renderComments()}</div>
+            {(!showForm && (
+                <button type="button" onClick={onShowForm}>
+                    Write a comment
+                </button>
+            )) || <SendComment />}
         </div>
     );
 };
