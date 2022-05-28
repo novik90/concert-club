@@ -1,0 +1,22 @@
+.footer__block {
+    display: flex;
+    justify-content: center;
+}
+
+.footer__link {
+    text-decoration: none;
+}
+
+.footer__link-novik {
+    color: var(--white);
+    background-color: rgb(0, 162, 255);
+    padding: 4px 12px;
+    margin-left: 4px;
+    border-radius: 4px;
+    transition: var(--transition-eio);
+}
+
+.footer__link-novik:hover {
+    background-color: rgb(0, 129, 204);
+    transition: var(--transition-eio);
+}
