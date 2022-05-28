@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchComments, fetchPost } from "../actions";
-import SendComment from "./SendComment";
+import { fetchComments, fetchPost } from "../../actions";
+import CommentForm from "../CommentForm/CommentForm";
 
-const PostComments = () => {
+const Post = () => {
     const params = useParams();
     const post = useSelector((state) => state.post);
     const comments = useSelector((state) => state.comments);
@@ -61,9 +61,9 @@ const PostComments = () => {
                 <button type="button" onClick={onShowForm}>
                     Write a comment
                 </button>
-            )) || <SendComment />}
+            )) || <CommentForm />}
         </div>
     );
 };
 
-export default PostComments;
+export default Post;

@@ -1,10 +1,11 @@
 import React from "react";
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 
-import UserList from "./UserList";
-import User from "./User";
+import UserList from "./UserList/UserList";
+import User from "./User/User";
 import "./App.css";
-import PostComments from "./PostComments";
+import Post from "./Post/Post";
+import Footer from "./Footer/Footer";
 
 const App = () => {
     return (
@@ -38,10 +39,11 @@ const App = () => {
                     <Route path="/user/:id" element={<User />} />
                     <Route
                         path="/post-comments/:id"
-                        element={<PostComments />}
+                        element={<Post />}
                     />
                 </Routes>
             </BrowserRouter>
+            <Footer />
         </div>
     );
 };

@@ -1,0 +1,144 @@
+.user {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 48px;
+}
+
+.user__title {
+    padding: 12px 18px 24px;
+}
+
+.user__title-text {
+    font-family: var(--title-font);
+    font-weight: 600;
+}
+
+.user__nickname {
+    border: var(--border);
+    font-family: var(--title-font);
+    padding: 12px 18px;
+}
+
+.user__info {
+    display: flex;
+    border-bottom: var(--border);
+    border-left: var(--border);
+    border-right: var(--border);
+}
+
+.user__item {
+    flex: 1;
+}
+
+.user__name {
+    border-right: var(--border);
+    font-size: 18px;
+    font-weight: 400;
+    padding: 12px 18px;
+}
+
+.user__email {
+    border-right: var(--border);
+    font-size: 18px;
+    font-weight: 400;
+    padding: 12px 18px;
+}
+
+.user__phone {
+    border-right: var(--border);
+    font-size: 18px;
+    font-weight: 400;
+    padding: 12px 18px;
+}
+
+.user__website {
+    font-size: 18px;
+    font-weight: 400;
+    padding: 12px 18px;
+}
+
+.user__company {
+    display: flex;
+    border-bottom: var(--border);
+    border-left: var(--border);
+    border-right: var(--border);
+}
+
+.user__company-name {
+    border-right: var(--border);
+    font-size: 18px;
+    font-weight: 400;
+    padding: 12px 18px;
+}
+
+.user__company-bs {
+    font-size: 18px;
+    font-weight: 400;
+    padding: 12px 18px;
+}
+
+/* POSTS */
+
+.posts {}
+
+.posts__header {
+    padding: 12px 18px 24px;
+}
+
+.posts__header-text {
+    font-family: var(--title-font);
+    font-weight: 600;
+}
+
+.posts__list {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+}
+
+.posts__item {
+    border: var(--border);
+    width: 332px;
+    margin-bottom: 12px;
+    transition: var(--transition-eio);
+}
+
+.posts__item:hover {
+    box-shadow: 4px 0 12px rgba(15, 15, 15, .2);
+    transition: var(--transition-eio);
+}
+
+.posts__link {
+    text-decoration: none;
+    color: var(--black);
+    padding: 14px 22px 14px 35px;
+    display: block;
+}
+
+.posts__title {
+    display: flex;
+    margin-bottom: 4px;
+}
+
+.posts__title-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+}
+
+.posts__date {
+    padding: 0 8px;
+    font-weight: 700;
+}
+
+.posts__body-text {
+    color: rgba(16, 16, 16, .41);
+}
+
+
+/* NAVIGATION */
+
+.navigation {
+    margin-bottom: 32px;
+}

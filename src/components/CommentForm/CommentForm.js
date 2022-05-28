@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const SendComment = () => {
+const CommentForm = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [body, setBody] = useState("");
@@ -56,4 +56,4 @@ const SendComment = () => {
     );
 };
 
-export default SendComment;
+export default CommentForm;

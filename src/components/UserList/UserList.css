@@ -1,0 +1,73 @@
+.users {
+    /* border: var(--test-border); */
+}
+
+.users__header {
+    padding: 18px 24px;
+}
+
+.users__header-title {
+    font-weight: bold;
+}
+
+.users__list {
+    display: flex;
+    flex-direction: column;
+}
+
+.users__item {
+    border: var(--border);
+    margin-bottom: 48px;
+}
+
+.users__fullname {
+    border-bottom: var(--border);
+    font-family: var(--title-font);
+    background-color: var(--white);
+}
+
+.users__fullname-link {
+    text-decoration: none;
+    color: var(--black);
+    display: block;
+    padding: 12px 18px;
+    transition: var(--transition-eio);
+}
+
+.users__fullname-link:hover {
+    background-color: var(--black);
+    color: var(--white);
+    transition: var(--transition-eio);
+}
+
+.users__info {
+    display: flex;
+}
+
+.users__address {
+    border-right: var(--border);
+    font-size: 18px;
+    font-weight: 400;
+    padding: 12px 18px;
+    width: 160px;
+}
+
+.users__email {
+    border-right: var(--border);
+    font-size: 18px;
+    font-weight: 400;
+    padding: 12px 18px;
+    width: 230px;
+}
+
+.users__phone {
+    border-right: var(--border);
+    font-size: 18px;
+    font-weight: 400;
+    padding: 12px 18px;
+    width: 200px;
+}
+
+.users__actions {
+    flex-grow: 1;
+}
