@@ -17,7 +17,7 @@ const App = () => {
                 </header>
                 <main className="page__main">
                     <Routes>
-                        <Route path="/" element={<UserList />} />
+                        <Route path="" exact element={<UserList />} />
                         <Route path="/user/:id" element={<User />} />
                         <Route path="/post/:id" element={<Post />} />
                     </Routes>
