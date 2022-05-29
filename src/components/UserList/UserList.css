@@ -37,6 +37,7 @@
 .users__fullname-link:hover {
     background-color: var(--black);
     color: var(--white);
+    text-decoration: underline double;
     transition: var(--transition-eio);
 }
 
@@ -70,4 +71,37 @@
 
 .users__actions {
     flex-grow: 1;
+}
+
+
+
+/* skeleton */
+
+.users__fullname-skeleton {
+    padding: 18px 24px;
+    
+}
+
+.users__fullname-skeleton-text {
+    width: 100%;
+    height: 28px;
+    background-color: rgba(16, 16, 16, .1);
+}
+
+.users__address-skeleton {
+    height: 17px;
+    width: 100%;
+    background-color: rgba(16, 16, 16, .1);
+}
+
+.users__email-skeleton {
+    height: 17px;
+    width: 100%;
+    background-color: rgba(16, 16, 16, .1);
+}
+
+.users__phone-skeleton {
+    height: 17px;
+    width: 100%;
+    background-color: rgba(16, 16, 16, .1);
 }

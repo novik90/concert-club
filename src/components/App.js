@@ -19,7 +19,7 @@ const App = () => {
                     <Routes>
                         <Route path="/" element={<UserList />} />
                         <Route path="/user/:id" element={<User />} />
-                        <Route path="/post-comments/:id" element={<Post />} />
+                        <Route path="/post/:id" element={<Post />} />
                     </Routes>
                 </main>
                 <footer className="page__footer footer">

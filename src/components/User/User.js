@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { fetchUser, fetchUserPosts } from "../../actions";
 import Button from "../Button/Button";
+import GoBack from "../GoBackButton/GoBack";
 
 import "./User.css";
 
 const User = () => {
     const params = useParams();
-    const history = useNavigate();
     const posts = useSelector((state) => state.userPosts);
     const user = useSelector((state) => state.user);
     const dispatch = useDispatch();
@@ -82,7 +82,7 @@ const User = () => {
                                 <li className="posts__item" key={i.id}>
                                     <Link
                                         className="posts__link"
-                                        to={"/post-comments/" + i.id}
+                                        to={"/post/" + i.id}
                                     >
                                         <div className="posts__title">
                                             <h3 className="posts__title-text">
@@ -118,13 +118,7 @@ const User = () => {
 
     return (
         <div className="container">
-            <div className="navigation">
-                <Button
-                    text={"⇠ Go Back"}
-                    classes={["button", "button-secondary"]}
-                    onClick={() => history(-1)}
-                />
-            </div>
+            <GoBack />
             {renderUser()}
             {renderPosts()}
         </div>
