@@ -30,6 +30,7 @@
     border-bottom: var(--border);
     border-right: var(--border);
     height: 53px;
+    position: relative;
 }
 
 .comment__name-input {
@@ -45,6 +46,7 @@
     flex: 1;
     border-bottom: var(--border);
     height: 53px;
+    position: relative;
 }
 
 .comment__email-input {
@@ -56,12 +58,33 @@
     font-size: 18px;
 }
 
+.comment__body {
+    position: relative;
+}
+
 .comment__body-input {
     box-sizing: border-box;
     border: none;
     font-size: 18px;
+    padding: 12px 18px;
     font-family: inherit;
     max-width: 100%;
     min-width: 100%;
     min-height: 240px;
+}
+
+.error-message {
+    position: absolute;
+    display: block;
+    bottom: 2px;
+    left: 18px;
+    color: #ff0000;
+}
+
+.error-message-top {
+    position: absolute;
+    display: block;
+    top: 2px;
+    left: 18px;
+    color: #ff0000;
 }

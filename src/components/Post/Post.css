@@ -84,3 +84,29 @@
 .feedback {
     margin-bottom: 48px;
 }
+
+/* skeleton */
+
+.post__title-skeleton {
+    height: 24px;
+    width: 100%;
+    background-color: var(--gray-skeleton);
+}
+
+.post__body-skeleton {
+    height: 17px;
+    width: 100%;
+    background-color: var(--gray-skeleton);
+}
+
+.comments__body-text-skeleton {
+    height: 24px;
+    width: 100%;
+    background-color: var(--gray-skeleton);
+}
+
+.comments__info-skeleton {
+    height: 17px;
+    width: 100%;
+    background-color: var(--gray-skeleton);
+}

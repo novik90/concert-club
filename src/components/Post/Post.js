@@ -24,9 +24,27 @@ const Post = () => {
         setShowForm((state) => !state);
     };
 
+    const postSkeleton = () => {
+        return (
+            <div className="post">
+                <div className="post__header">
+                    <h1 className="post__header-text">POST</h1>
+                </div>
+                <div className="post__details">
+                    <div className="post__title">
+                        <div className="post__title-skeleton"></div>
+                    </div>
+                    <div className="post__body">
+                        <div className="post__body-skeleton"></div>
+                    </div>
+                </div>
+            </div>
+        );
+    };
+
     const renderPost = () => {
         return !post ? (
-            <h2>Loading</h2>
+            postSkeleton()
         ) : (
             <div className="post">
                 <div className="post__header">
@@ -40,9 +58,41 @@ const Post = () => {
         );
     };
 
+    const commentsSeleton = () => {
+        const comment = (
+            <li className="comments__item">
+                <div className="comments__body">
+                    <div className="comments__body-text">
+                        <div className="comments__body-text-skeleton"></div>
+                    </div>
+                </div>
+                <div className="comments__info">
+                    <div className="comments__author">
+                        <div className="comments__info-skeleton"></div>
+                    </div>
+                    <div className="comments__email">
+                        <div className="comments__info-skeleton"></div>
+                    </div>
+                </div>
+            </li>
+        );
+        return (
+            <div className="comments">
+                <div className="comments__header">
+                    <h2 className="comments__header-text">Comments</h2>
+                </div>
+                <ul className="comments__list">
+                    {comment}
+                    {comment}
+                    {comment}
+                </ul>
+            </div>
+        );
+    };
+
     const renderComments = () => {
         return !comments ? (
-            <h2>Loading</h2>
+            commentsSeleton()
         ) : (
             <div className="comments">
                 <div className="comments__header">
@@ -53,7 +103,9 @@ const Post = () => {
                         <li className="comments__item" key={i.id}>
                             <div className="comments__body">
                                 <p className="comments__body-text">
-                                    <span className="comments__body-number">{index + 1}</span>
+                                    <span className="comments__body-number">
+                                        {index + 1}
+                                    </span>
                                     {i.body}
                                 </p>
                             </div>

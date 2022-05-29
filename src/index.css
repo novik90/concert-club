@@ -7,6 +7,7 @@
     --black-hover: #2a2a2a;
     --white: #ffffff;
     --white-hover: #fafafa;
+    --gray-skeleton: rgba(16, 16, 16, .2);
     --title-font: "Alegreya Sans SC", sans-serif;
     --transition-eio: all .1s ease-in-out;
 }

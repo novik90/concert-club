@@ -29,3 +29,21 @@ export const fetchPost = (postId) => async (dispatch) => {
     const response = await jsonPlaceholder.get(`/posts?id=${postId}`);
     dispatch({ type: "FETCH_POST", payload: response.data });
 };
+
+export const postComment = (postId, data) => async () => {
+    // dispach sending
+    const response = await jsonPlaceholder.post(
+        `/posts/${postId}/coamments`,
+        data
+    );
+
+    if (response.status === 200) {
+        // dispach succes
+        // Success message
+        return;
+    } else {
+        // dispach error
+        // Error message
+        return new Error("post error");
+    }
+};

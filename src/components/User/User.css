@@ -133,3 +133,33 @@
 .posts__body-text {
     color: rgba(16, 16, 16, .41);
 }
+
+/* skeleton */
+
+.user__nickname-skeleton {
+    margin: 8px 0;
+    height: 24px;
+    width: 100%;
+    background-color: var(--gray-skeleton);
+}
+
+.user__skeleton {
+    height: 17px;
+    width: 100%;
+    background-color: var(--gray-skeleton);
+}
+
+.posts__title-skeleton {
+    height: 20px;
+    background-color: var(--gray-skeleton);
+}
+
+.posts__body-skeleton {
+    height: 11px;
+    margin-bottom: 4px;
+    background-color: var(--gray-skeleton);
+}
+
+.posts__body-skeleton:last-child {
+    width: 45%;
+}

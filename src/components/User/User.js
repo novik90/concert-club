@@ -32,9 +32,42 @@ const User = () => {
         }
     };
 
+    const userSkeleton = () => (
+        <div className="user">
+            <div className="user__title">
+                <h2 className="user__title-text">User Card</h2>
+            </div>
+            <div className="user__nickname">
+                <div className="user__nickname-skeleton"></div>
+            </div>
+            <div className="user__info">
+                <div className="user__item user__name">
+                    <div className="user__skeleton"></div>
+                </div>
+                <div className="user__item user__email">
+                    <div className="user__skeleton"></div>
+                </div>
+                <div className="user__item user__phone">
+                    <div className="user__skeleton"></div>
+                </div>
+                <div className="user__item user__website">
+                    <div className="user__skeleton"></div>
+                </div>
+            </div>
+            <div className="user__company">
+                <div className="user__item user__company-name">
+                    <div className="user__skeleton"></div>
+                </div>
+                <div className="user__item user__company-bs">
+                    <div className="user__skeleton"></div>
+                </div>
+            </div>
+        </div>
+    );
+
     const renderUser = () => {
         return (
-            (!user && <h2>Loading</h2>) || (
+            (!user && userSkeleton()) || (
                 <div className="user">
                     <div className="user__title">
                         <h2 className="user__title-text">User Card</h2>
@@ -69,9 +102,42 @@ const User = () => {
         );
     };
 
+    const postsSkeleton = () => {
+        return (
+            <div className="posts">
+                <div className="posts__header">
+                    <h2 className="posts__header-text">Posts</h2>
+                </div>
+                <ul className="posts__list">
+                    <li className="posts__item">
+                        <div href="#" className="posts__link">
+                            <div className="posts__title">
+                                <div className="posts__title-text posts__title-skeleton"></div>
+                            </div>
+                            <div className="posts__body">
+                                <div className="posts__body-text posts__body-skeleton"></div>
+                                <div className="posts__body-text posts__body-skeleton"></div>
+                                <div className="posts__body-text posts__body-skeleton"></div>
+                                <div className="posts__body-text posts__body-skeleton"></div>
+                                <div className="posts__body-text posts__body-skeleton"></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div>
+                    <Button
+                        onClick={showAllPosts}
+                        text={"Loading"}
+                        classes={["button", "button-secondary"]}
+                    />
+                </div>
+            </div>
+        );
+    };
+
     const renderPosts = () => {
         return (
-            (!posts && <h2>Loading</h2>) || (
+            (!posts && postsSkeleton()) || (
                 <div className="posts">
                     <div className="posts__header">
                         <h2 className="posts__header-text">Posts</h2>
