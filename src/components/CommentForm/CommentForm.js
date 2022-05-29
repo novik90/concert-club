@@ -75,6 +75,8 @@ const CommentForm = () => {
         console.group("Send to server");
         console.log(`Name: ${name}\nEmail: ${email}\nBody message: ${body}`);
         console.groupEnd();
+
+        // dispatch fetch comments
     };
 
     const blurHandler = (event) => {

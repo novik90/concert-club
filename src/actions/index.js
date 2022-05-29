@@ -30,20 +30,10 @@ export const fetchPost = (postId) => async (dispatch) => {
     dispatch({ type: "FETCH_POST", payload: response.data });
 };
 
-export const postComment = (postId, data) => async () => {
-    // dispach sending
-    const response = await jsonPlaceholder.post(
-        `/posts/${postId}/coamments`,
-        data
-    );
-
-    if (response.status === 200) {
-        // dispach succes
-        // Success message
-        return;
-    } else {
-        // dispach error
-        // Error message
-        return new Error("post error");
-    }
+export const postComment = (postId, data) => async (dispach) => {
+                                                                                // dispach sending
+    await jsonPlaceholder
+        .post(`/posts/${postId}/comments`, data)
+        .then((res) => console.log("Response : " + JSON.stringify(res.data), res))     // dispatch succes message
+        .catch((e) => console.log("error: " + e));                              // dispatch error message
 };
