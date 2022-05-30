@@ -16,6 +16,7 @@ const App = () => {
                     <Header />
                 </header>
                 <main className="page__main">
+                    <UserList />
                     <Routes>
                         <Route index element={<UserList />} />
                         <Route path="/user/:id" element={<User />} />
